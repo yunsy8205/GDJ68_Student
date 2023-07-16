@@ -11,7 +11,7 @@ public class StudentDAO {
 	
 	//상품 N개 조회
 		//bankBookSearch
-		public ArrayList<StudentDTO> bankBookSearch(StudentDTO studentDTO) throws Exception{
+		public ArrayList<StudentDTO> studentSearch(StudentDTO studentDTO) throws Exception{
 			ArrayList<StudentDTO> ar = new ArrayList<StudentDTO>();
 			//1. DB 연결
 			Connection con = DBConnector.getConnection();
@@ -27,6 +27,7 @@ public class StudentDAO {
 			ResultSet rs = st.executeQuery();
 			
 			while(rs.next()) {
+				studentDTO = new StudentDTO();
 				studentDTO.setStudNum(rs.getLong("NUM"));
 				studentDTO.setStudName(rs.getNString("NAME"));
 				studentDTO.setStudKor(rs.getInt("KOR"));

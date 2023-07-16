@@ -19,8 +19,6 @@ public class DBConnector {
 	//2.DB 연결
 		Connection con = DriverManager.getConnection(url, user, password);
 		
-		System.out.println(con);// 주소가 나오다면 연결 성공
-		
 		return con;
 	
 	}

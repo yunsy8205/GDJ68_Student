@@ -13,7 +13,7 @@ public class StudentOutput {
 		System.out.println(studentDTO.getStudAvg());
 	}
 	
-	public void vies(ArrayList<StudentDTO> ar) {
+	public void view(ArrayList<StudentDTO> ar) {
 		
 		for(int i=0; i<ar.size();i++) {
 			this.view(ar.get(i));

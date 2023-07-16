@@ -38,5 +38,12 @@ public class StudentInput {
 		
 		return studentDTO;
 	}
+	
+	public StudentDTO studentSearch() {
+		System.out.println("조회할 이름를 입력하세요.");
+		studentDTO.setStudName(sc.next());
+		
+		return studentDTO;
+	}
 
 }
